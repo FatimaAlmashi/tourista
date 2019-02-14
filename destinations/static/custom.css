@@ -1,0 +1,58 @@
+body{
+	font-family: 'Dosis', sans-serif;
+	font-family: 'Poiret One', cursive;
+	background-color: hsl(0, 0%, 94%);
+	color: #808080;
+	z-index: 1;
+}
+.logo{
+	z-index: 2;
+	font-size:100px;
+	position: absolute;
+	font-family: 'Michroma', sans-serif;
+	margin-top: 150px;
+	margin-left: 40px;
+	text-shadow: 2px 2px #808080;
+}
+.add_dist{
+	z-index: 2;
+	font-size:70px;
+	position: absolute;
+	margin-top: 250px;
+	margin-left: 450px;
+	color:white;
+}
+.dist_name{
+	font-size: 30px;
+	color: white;
+}
+.footer{
+	text-align: center;
+}
+.tourista{
+	font-family: 'Michroma', sans-serif;
+	color: white;
+	text-align: center;
+}
+.card-img{
+	width: 100%;
+}
+.no_link_change_clr{
+	list-style:none;
+}
+.description{
+	overflow: scroll;
+}
+hr { 
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 5px;
+}
+.form_size{
+	width: 50%;
+}
+

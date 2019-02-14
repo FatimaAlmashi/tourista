@@ -3,44 +3,69 @@
 {% load static %}
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Add a link to the bootstrap CDN here -->
-  
-  
-  <!-- Uncomment the following line to include your custom CSS file -->
-  {% comment %} 
-    <link rel="stylesheet" type="text/css" href="{% static 'custom.css' %}"> 
-  {% endcomment %}
+	<!-- Add a link to the bootstrap CDN here -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	
+	<!-- Uncomment the following line to include your custom CSS file -->
+		<!-- Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="{% static 'custom.css' %}"> 
+		<link href="https://fonts.googleapis.com/css?family=Indie+Flower|Miss+Fajardose" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Indie+Flower|Miss+Fajardose" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Michroma" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
 
-  <title>{% block title %}{% endblock title %}</title>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+	<title>{% block title %}{% endblock title %}</title>
 </head>
 
 <body>
-  
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="{% url 'destination-list' %}">Tourista</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'destination-create' %}">Add a destination</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <!-- End Navbar -->
+	<!-- This div contains all page contents-->
+	<div class="biggest_div container">
+		<div class="logo center text-white">
+			Tourista
+		</div>
+		<div>
+			<a class="center text-white add_dist" href="{% url 'destination-create' %}">
+				<button class="btn btn-outline-secondary text-white" type="button" value="Add a destination">
+					<i class="fas fa-plus-circle"></i>Add a destination
+				</button>
+			</a>
+		</div>
 
-  <div class="container">
-    {% block content %} {% endblock content %}
-  </div>
+		<nav class=" row navbar navbar-expand-lg navbar-dark bg-dark ">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<table style="">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+							<a class="" href="{% url 'destination-list' %}"> <h3 class="tourista">Tourista</h3> </a>
+					</li>
+				</ul>
+				</table>
+			</div>
+		</nav>
+		<div class=" row navbar navbar-expand-lg navbar-dark bg-info"></div>
 
-  <!-- Add your bootstrap script tags here -->
+		<!-- End Navbar -->
+		<!-- Banner -->
+		<div class="banner row">
+			<img src="/static/banner.jpg" alt="Banner" width="100%" height="100%">
+		</div>
+		<div class="container">
+			{% block content %} {% endblock content %}
+		</div>
+	</div>
+	<!-- Add your bootstrap script tags here -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 </body>
 
